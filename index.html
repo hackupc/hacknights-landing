@@ -18,11 +18,47 @@
   <meta name="MobileOptimized" content="320"/>
   <meta name="keywords" content="Hackathon, HackUPC, Universitat Politécnica de Catalunya, Working space, Mini, Pizza, Hacker, Hacking, Barcelona"/>
   
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<style>
-    .body{
-      background: url("media/bricks-small.png") repeat center;
-      margin: 0;
+
+    /*   ---   Fonts   ---   */
+    @font-face {
+      font-family: 'neoneon';
+      src: url('fonts/Neoneon.woff2') format('woff2'),
+           url('fonts/Neoneon.woff') format('woff'),
+           url('fonts/Neoneon.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
     }
+
+    /*   ---   General   ---   */
+    .body{
+      font-family: 'Montserrat', -apple-system, 'Roboto', sans-serif;
+      margin: 0;
+      position: relative;
+      background: url("media/bricks-small.png") repeat center;
+    }
+    /* I use before to aply a filter to the backgroung image: https://css-tricks.com/apply-a-filter-to-a-background-image/ */
+    .body::before{
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: url("media/bricks-small.png") repeat center;
+      filter: hue-rotate(235deg);
+      z-index: -1;
+      /* animation: hue-change 10s infinite; */
+    }
+    .spotlight{
+      background-image: radial-gradient(transparent, black);
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    ::selection{ background-color: #e100ff; color: white; }
+
+    /*   ---   Hero   ---   */
     .hero{
       display: flex;
       flex-direction: column;
@@ -30,30 +66,100 @@
       justify-content: center;
       min-height: 100vh;
       box-sizing: border-box;
-      padding: 1em;
+      padding: 0 2.5em;
       color: #fff;
     }
-    .spotlight{
-      background-image: radial-gradient(transparent, black);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      opacity: 0.75;
-      z-index: -1;
+    .hero--title{
+      font-family: neoneon;
+      color: #8de8ee;
+      text-shadow: 0 0 1em currentColor, 0 0 5em currentColor, 0 0 0.1em currentColor, 0 0 2em currentColor, 0 0 3em currentColor;
+      font-size: 4em;
+      letter-spacing: 0.2em;
+      font-weight: normal;
+      line-height: 1.75;
+    }
+
+    /*   ---   Sections   ---   */
+    .section{min-height: 10em;}
+    .section--title{ color: #fff; text-align: center;}
+
+
+    /*   ---   Footer   ---   */
+    .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
+    .footer { text-align: center; padding: 0.2em 0 0.3em; color: #7ECBD4; text-shadow: 0 0 0.7em currentColor; }
+    .footer:hover .footer--heart { transform: scale(1.333); }
+
+
+    /*   ---   Animations   ---   */
+    .dim{ will-change: opacity; animation: dim 4.17s infinite; }
+    .blink1{ will-change: opacity; animation: blink1 5.32s infinite; }
+    .blink2{ will-change: opacity; animation: blink2 8.19s 0s infinite; }
+    @keyframes dim{
+      0%  { opacity: 1.00; }
+      1%  { opacity: 0.80; }
+      2%  { opacity: 1.00; }
+      82% { opacity: 0.95; }
+      83% { opacity: 0.80; }
+      84% { opacity: 0.95; }
+      100%{ opacity: 1.00; }
+    }
+    @keyframes blink1{
+      0%  { opacity: 1.00; }
+      1%  { opacity: 0.00; }
+      2%  { opacity: 1.00; }
+      3%  { opacity: 0.15; }
+      4%  { opacity: 1.00; }
+      100%{ opacity: 1.00; }
+    }
+    @keyframes blink2{
+      0.0% { opacity: 1.00; }
+      0.5% { opacity: 0.00; }
+      1.0% { opacity: 0.50; }
+      1.5% { opacity: 0.15; }
+      2.0% { opacity: 0.85; }
+      2.5% { opacity: 0.25; }
+      3.0% { opacity: 0.50; }
+      3.5% { opacity: 1.00; }
+      100% { opacity: 1.00; }
+    }
+    @keyframes hue-change{
+      from{ filter: hue-rotate(0deg); }
+      to  { filter: hue-rotate(360deg); }
     }
   </style>
 </head>
 <body class="body">
+
   <div class="spotlight"></div>
+
   <main class="hero">
-    <h1>Hack Nights</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid facilis eius, doloribus obcaecati blanditiis illum. Veniam magni facere ipsam, suscipit qui magnam. Vero eveniet error adipisci magnam. Culpa, nostrum molestias!</p>
+    <h1 class="hero--title dim">Hac<span class="blink2">k</span> Nig<span class="blink1">h</span>ts</h1>
+    <span class="hero--date"></span>
   </main>
+
+  <section class="section">
+    <h2 class="section--title">WTF is HackNights?</h2>
+  </section>
+
+  <section class="section">
+    <h2 class="section--title">Where?</h2>
+  </section>
+
+  <section class="section">
+    <h2 class="section--title">Schedule</h2>
+  </section>
+
+  <section class="section">
+    <h2 class="section--title">Thanks To</h2>
+  </section>
+
+  <section class="section">
+    <h2 class="section--title">Partners</h2>
+  </section>
+
+  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink2">❤</span class="footer--heart"> by <b class="blink1">Hackers@UPC</b></footer>
   
-	<script>
+  <script>
   
   </script>
 </body>
