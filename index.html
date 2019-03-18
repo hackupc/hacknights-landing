@@ -113,7 +113,7 @@
       white-space: nowrap;
     }
     .hero--button{
-      margin-top: 5em;
+      margin-top: 25vh;
       color: #fff;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -126,9 +126,17 @@
       text-shadow: 0 0 6em #fc60e7, 0 0 0.1em #fc60e7;
       box-shadow: 0 0 6em #fc60e7, 0 0 0.1em #fc60e7, inset 0 0 0.1em #fc60e7;      
       transition: transform 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      animation: hue-change 63.17s 0s infinite;
+      transform: scale(1) skewY(-3.333deg) rotate(0);
     }
     .hero--button:hover{
-      transform: scale(1.1);
+      transform: scale(1.1) skewY(-3.333deg) rotate(3.333deg);
+      animation-duration: 0.856s;
+    }
+    .hero--button:active{
+      transform: scale(0.85) skewY(-3.333deg) rotate(0);
+      filter: grayscale(100%);
+      animation: none;
     }
 
     /*   ---   Sections   ---   */
@@ -178,6 +186,7 @@
     .dim_2{ will-change: opacity; animation: dim 4.57s 0.97s infinite; }
     .dim_3{ will-change: opacity; animation: dim 3.91s 1.24s infinite; }
     .dim_4{ will-change: opacity; animation: dim 4.22s 3.12s infinite; }
+    .dim_5{ will-change: opacity; animation: dim 3.81s 2.71s infinite; }
     .blink_1{ will-change: opacity; animation: blink_1 5.32s infinite; }
     .blink_2{ will-change: opacity; animation: blink_2 8.19s 0s infinite; }
     @keyframes dim{
@@ -225,27 +234,27 @@
     </div>
     <span class="hero--date"><span class="hero--date--episode" id="hero--date--episode">Episode III</span> on <span class="hero--date--value" id="hero--date--value">Friday 29th of May at 8:00p.m.</span></span>
 
-    <a href="#" class="hero--button dim_2">Aply now</a>
+    <a href="#" class="hero--button">Aply now</a>
   </main>
 
   <section class="section">
-    <h2 class="section--title section--title_cyan">WTF is HackNights</h2>
+    <h2 class="section--title section--title_cyan dim_1">WT<span class="blink_1">F</span> is Hack<span class="blink_2">N</span>ights</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_green">Where</h2>
+    <h2 class="section--title section--title_green dim_2">Whe<span class="blink_1">r</span>e</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_orange">Schedule</h2>
+    <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_2">d</span>ule</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_white">Thanks To</h2>
+    <h2 class="section--title section--title_white dim_4">Tha<span class="blink_1">n</span>k<span class="blink_2">s</span> To</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_yellow">Partners</h2>
+    <h2 class="section--title section--title_yellow dim_5">Par<span class="blink_2">t</span>ners</h2>
   </section>
 
   <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_2">❤</span class="footer--heart"> by <b class="blink_1">Hackers@UPC</b></footer>
