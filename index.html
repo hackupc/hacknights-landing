@@ -18,7 +18,7 @@
   <meta name="MobileOptimized" content="320"/>
   <meta name="keywords" content="Hackathon, HackUPC, Universitat Politécnica de Catalunya, Working space, Mini, Pizza, Hacker, Hacking, Barcelona"/>
   
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Inconsolata:800" rel="stylesheet">
 	<style>
 
     /*   ---   Fonts   ---   */
@@ -30,20 +30,40 @@
       font-weight: normal;
       font-style: normal;
     }
+    @font-face {
+      font-family: 'Beon';
+      src: url('fonts/beon-webfont.eot');
+      src: local('☺'), url('fonts/beon-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/beon-webfont.woff') format('woff'),url('fonts/beon-webfont.ttf') format('truetype'),url('fonts/beon-webfont.svg#BeonMedium') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
 
     /*   ---   General   ---   */
+    :root{
+      --neon-white: #fff;
+      --neon-glow-white: #fff;
+      --neon-pink: #fc00e7;
+      --neon-glow-pink: #fc60e7;
+      --neon-cyan: #F7DF01;
+      --neon-glow-cyan: #91dce0;
+      --neon-green: #6FE61B;
+      --neon-glow-green: #6FE61B;
+      --neon-orange: #F77A01;
+      --neon-glow-orange: #F77A01;
+      --neon-yellow: #F7DF01;
+      --neon-glow-yellow: #F7DF01;
+    }
     .body{
       font-family: 'Montserrat', -apple-system, 'Roboto', sans-serif;
       margin: 0;
-      position: relative;
-      background: #553e6c url("media/b3.jpg") center/40% repeat;
+      background: #553e6c url("media/b3.jpg") center/300px repeat;
       background-blend-mode: multiply;
     }
     .spotlight{
       background-image: radial-gradient(transparent, black);
       position: fixed;
       top: 0; right: 0; bottom: 0; left: 0;
-      z-index: -1;
+      z-index: 0;
       pointer-events: none;
       opacity: 0.8;
     }
@@ -64,31 +84,44 @@
       position: relative;
     }
     .hero--title{
-      font-family: neoneon;
+      font: 4em neoneon, sans-serif;
       color: #fff;
       text-shadow: 0 0 1em currentColor, 0 0 5em currentColor, 0 0 0.1em currentColor, 0 0 2em currentColor, 0 0 3em currentColor;
-      font-size: 4em;
       letter-spacing: 0.2em;
       font-weight: normal;
       line-height: 1.75;
       margin: 0 0 -0.15em;
+      text-transform: uppercase;
     }
     .hero--title_color{
       position: absolute;
       font-weight: bold;
       color: #fc00e7;
-      z-index: -1;
+      z-index: 0;
+      user-select: none;
     }
-    .hero--date{}
+    .hero--date{
+      font-family: 'Inconsolata', monospace;
+      line-height: 1.75;
+      z-index: 1;
+      text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.667);
+    }
+    .hero--date--episode{
+      font-weight: bold;
+    }
+    .hero--date--value{
+      white-space: nowrap;
+    }
     .hero--button{
       margin-top: 5em;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
       border: solid 2px currentColor;
       border-radius: 2em;
-      color: #fff;
       padding: 0.5em 1em;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font: 1.5em Beon, sans-serif;
       background: rgba(227, 92, 215, 0.41);
       text-shadow: 0 0 6em #fc60e7, 0 0 0.1em #fc60e7;
       box-shadow: 0 0 6em #fc60e7, 0 0 0.1em #fc60e7, inset 0 0 0.1em #fc60e7;      
@@ -97,10 +130,42 @@
     .hero--button:hover{
       transform: scale(1.1);
     }
-    /*   ---   Sections   ---   */
-    .section{min-height: 10em;}
-    .section--title{ color: #fff; text-align: center;}
 
+    /*   ---   Sections   ---   */
+    .section{
+      min-height: 10em;
+      padding: 2em;
+      text-align: center;
+    }
+    .section--title{
+      color: #fff;
+      text-align: center;
+      font: 2em Beon, sans-serif;
+      text-shadow: 0 0 1em var(--neon-glow-white), 0 0 5em var(--neon-glow-white), 0 0 0.1em var(--neon-glow-white), 0 0 2em var(--neon-glow-white), 0 0 3em var(--neon-glow-white);
+      letter-spacing: 1px;
+      position: relative;
+      margin: 0 auto;
+      display: inline-block;
+    }
+    .section--title::before{
+      content: "";
+      box-shadow: 0 0 1em var(--neon-glow-white), 0 0 5em var(--neon-glow-white), 0 0 0.1em var(--neon-glow-white), 0 0 2em var(--neon-glow-white), 0 0 3em var(--neon-glow-white);
+      position: absolute;
+      right: 0.333em; bottom: -0.1em; left: 0.333em;
+      height: 2px;
+      background: #fff;
+      will-change: opacity; animation: dim 4.22s 3.12s infinite;
+    }
+    .section--title_cyan{text-shadow: 0 0 1em var(--neon-glow-cyan), 0 0 5em var(--neon-glow-cyan), 0 0 0.1em var(--neon-glow-cyan), 0 0 2em var(--neon-glow-cyan), 0 0 3em var(--neon-glow-cyan);}
+    .section--title_cyan::before{box-shadow: 0 0 1em var(--neon-glow-cyan), 0 0 5em var(--neon-glow-cyan), 0 0 0.1em var(--neon-glow-cyan), 0 0 2em var(--neon-glow-cyan), 0 0 3em var(--neon-glow-cyan);}
+    .section--title_pink{text-shadow: 0 0 1em var(--neon-glow-pink), 0 0 5em var(--neon-glow-pink), 0 0 0.1em var(--neon-glow-pink), 0 0 2em var(--neon-glow-pink), 0 0 3em var(--neon-glow-pink);}
+    .section--title_pink::before{box-shadow: 0 0 1em var(--neon-glow-pink), 0 0 5em var(--neon-glow-pink), 0 0 0.1em var(--neon-glow-pink), 0 0 2em var(--neon-glow-pink), 0 0 3em var(--neon-glow-pink);}
+    .section--title_green{text-shadow: 0 0 1em var(--neon-glow-green), 0 0 5em var(--neon-glow-green), 0 0 0.1em var(--neon-glow-green), 0 0 2em var(--neon-glow-green), 0 0 3em var(--neon-glow-green);}
+    .section--title_green::before{box-shadow: 0 0 1em var(--neon-glow-green), 0 0 5em var(--neon-glow-green), 0 0 0.1em var(--neon-glow-green), 0 0 2em var(--neon-glow-green), 0 0 3em var(--neon-glow-green);}
+    .section--title_orange{text-shadow: 0 0 1em var(--neon-glow-orange), 0 0 5em var(--neon-glow-orange), 0 0 0.1em var(--neon-glow-orange), 0 0 2em var(--neon-glow-orange), 0 0 3em var(--neon-glow-orange);}
+    .section--title_orange::before{box-shadow: 0 0 1em var(--neon-glow-orange), 0 0 5em var(--neon-glow-orange), 0 0 0.1em var(--neon-glow-orange), 0 0 2em var(--neon-glow-orange), 0 0 3em var(--neon-glow-orange);}
+    .section--title_yellow{text-shadow: 0 0 1em var(--neon-glow-yellow), 0 0 5em var(--neon-glow-yellow), 0 0 0.1em var(--neon-glow-yellow), 0 0 2em var(--neon-glow-yellow), 0 0 3em var(--neon-glow-yellow);}
+    .section--title_yellow::before{box-shadow: 0 0 1em var(--neon-glow-yellow), 0 0 5em var(--neon-glow-yellow), 0 0 0.1em var(--neon-glow-yellow), 0 0 2em var(--neon-glow-yellow), 0 0 3em var(--neon-glow-yellow);}
 
     /*   ---   Footer   ---   */
     .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
@@ -110,8 +175,11 @@
 
     /*   ---   Animations   ---   */
     .dim{ will-change: opacity; animation: dim 4.17s infinite; }
-    .blink1{ will-change: opacity; animation: blink1 5.32s infinite; }
-    .blink2{ will-change: opacity; animation: blink2 8.19s 0s infinite; }
+    .dim_2{ will-change: opacity; animation: dim 4.57s 0.97s infinite; }
+    .dim_3{ will-change: opacity; animation: dim 3.91s 1.24s infinite; }
+    .dim_4{ will-change: opacity; animation: dim 4.22s 3.12s infinite; }
+    .blink_1{ will-change: opacity; animation: blink_1 5.32s infinite; }
+    .blink_2{ will-change: opacity; animation: blink_2 8.19s 0s infinite; }
     @keyframes dim{
       0%  { opacity: 1.00; }
       1%  { opacity: 0.80; }
@@ -121,7 +189,7 @@
       84% { opacity: 0.95; }
       100%{ opacity: 1.00; }
     }
-    @keyframes blink1{
+    @keyframes blink_1{
       0%  { opacity: 1.00; }
       1%  { opacity: 0.00; }
       2%  { opacity: 1.00; }
@@ -129,7 +197,7 @@
       4%  { opacity: 1.00; }
       100%{ opacity: 1.00; }
     }
-    @keyframes blink2{
+    @keyframes blink_2{
       0.0% { opacity: 1.00; }
       0.5% { opacity: 0.00; }
       1.0% { opacity: 0.50; }
@@ -149,38 +217,38 @@
 <body class="body">
 
   <div class="spotlight"></div>
-
+  
   <main class="hero">
     <div class="hero--title-container">
-      <span class="hero--title hero--title_color dim">Hac<span class="blink2">k</span> Nig<span class="blink1">h</span>ts</span>
-      <h1 class="hero--title dim">Hac<span class="blink2">k</span> Nig<span class="blink1">h</span>ts</h1>
+      <span class="hero--title hero--title_color dim">Hac<span class="blink_2">k</span> Nig<span class="blink_1">h</span>ts</span>
+      <h1 class="hero--title dim">Hac<span class="blink_2">k</span> Nig<span class="blink_1">h</span>ts</h1>
     </div>
-    <span class="hero--date"><span>>></span> Friday 30th of May at 8:00p.m.</span>
+    <span class="hero--date"><span class="hero--date--episode" id="hero--date--episode">Episode III</span> on <span class="hero--date--value" id="hero--date--value">Friday 29th of May at 8:00p.m.</span></span>
 
-    <a href="#" class="hero--button">Aply now</a>
+    <a href="#" class="hero--button dim_2">Aply now</a>
   </main>
 
   <section class="section">
-    <h2 class="section--title">WTF is HackNights?</h2>
+    <h2 class="section--title section--title_cyan">WTF is HackNights</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title">Where?</h2>
+    <h2 class="section--title section--title_green">Where</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title">Schedule</h2>
+    <h2 class="section--title section--title_orange">Schedule</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title">Thanks To</h2>
+    <h2 class="section--title section--title_white">Thanks To</h2>
   </section>
 
   <section class="section">
-    <h2 class="section--title">Partners</h2>
+    <h2 class="section--title section--title_yellow">Partners</h2>
   </section>
 
-  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink2">❤</span class="footer--heart"> by <b class="blink1">Hackers@UPC</b></footer>
+  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_2">❤</span class="footer--heart"> by <b class="blink_1">Hackers@UPC</b></footer>
   
   <script>
   
