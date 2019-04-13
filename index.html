@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>Hack Nights</title>
-  <meta name="description" content="">
-  <meta name="author" content="HackUPC">
+  <title>Hack Nights by Hackers@UPC</title>
+  <meta name="description" content="HackNights are born with the aim of offering a collaborative work space where you can work freely in what you like the most. A place where you learn, grow and teach in community. No prize, no competition. Only you, your friends and your projects.">
+  <meta name="author" content="Hackers@UPC">
   <meta name="application-name" content="Hack Nights">
   <meta name="apple-mobile-web-app-title" content="Hack Nights">
   <meta name="theme-color" content="#553e6c">
@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://hacknights.hackupc.com">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320"/>
-  <meta name="keywords" content="Hackathon, HackUPC, Universitat Politécnica de Catalunya, Working space, Mini, Pizza, Hacker, Hacking, Barcelona"/>
+  <meta name="keywords" content="Hackathon, HackUPC, Hackers@UPC, UPC, FIB, Universitat Politécnica de Catalunya, Working space, Mini, Pizza, Hack, Hacker, Hacking, Barcelona, BCN"/>
   
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Inconsolata:800" rel="stylesheet">
 	<style>
@@ -150,6 +150,7 @@
       min-height: 10em;
       padding: 2em;
       text-align: center;
+      color: white;
     }
     .section--title{
       color: #fff;
@@ -180,6 +181,21 @@
     .section--title_yellow{text-shadow: 0 0 1em var(--neon-glow-yellow), 0 0 0.1em var(--neon-glow-yellow), 0 0 2em var(--neon-glow-yellow);}
     .section--title_yellow::before{box-shadow: 0 0 1em var(--neon-glow-yellow), 0 0 0.1em var(--neon-glow-yellow), 0 0 2em var(--neon-glow-yellow);}
 
+    /*   ---   Sections Content   ---   */
+    .brands{
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 2em;
+    }
+    .brands--link{
+      display: block;
+    }
+    .brands--img{
+      width: 200px;
+      max-width: 50%;
+      margin: 2em;
+    }
+    
     /*   ---   Footer   ---   */
     .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
     .footer { text-align: center; padding: 0.2em 0 0.3em; color: #7ECBD4; text-shadow: 0 0 0.7em currentColor; }
@@ -241,22 +257,40 @@
 
   <section class="section">
     <h2 class="section--title section--title_cyan dim_1">WT<span class="blink_1">F</span> is Hack<span class="blink_2">N</span>ights</h2>
+    <p>HackNights are born with the aim of offering a collaborative work space where you can work freely in what you like the most. A place where you learn, grow and teach in community. No prize, no competition. Only you, your friends and your projects.</p>
   </section>
 
   <section class="section">
     <h2 class="section--title section--title_green dim_2">Whe<span class="blink_1">r</span>e</h2>
+    <p>HackNights are held at Aula d’Estudis in Campus Nord, next to the Rector Gabriel Ferraté library.</p>
   </section>
 
   <section class="section">
     <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_2">d</span>ule</h2>
+    <p>Next editions will be on:</p>
+    <ul>
+      <li><strike>February 15th</strike></li>
+      <li><strike>March 1st</strike></li>
+      <li><strike>March 29th</strike></li>
+      <li>April 12th</li>
+      <li>May 24th</li>
+    </ul>
   </section>
 
   <section class="section">
     <h2 class="section--title section--title_white dim_4">Tha<span class="blink_1">n</span>k<span class="blink_2">s</span> To</h2>
+    <div class="brands">
+      <a href="https://github.com/" target="_blank"  class="brands--link"><img src="/media/GitHub_logo.svg" alt="GitHub" class="brands--img"></a>
+      <a href="https://www.fib.upc.edu/" target="_blank"  class="brands--link"><img src="/media/FIB-UPC_logo.png" alt="FIB-UPC" class="brands--img"></a>
+    </div>
   </section>
 
   <section class="section">
     <h2 class="section--title section--title_yellow dim_5">Par<span class="blink_2">t</span>ners</h2>
+    <div class="brands">
+      <a href="http://www.zanuy.com/" target="_blank"  class="brands--link"><img src="/media/Zanuy_logo.png" alt="Zanuy" class="brands--img"></a>
+      <a href="https://www.redbull.com/" target="_blank"  class="brands--link"><img src="/media/RedBull_logo.svg" alt="RedBull" class="brands--img"></a>
+    </div>
   </section>
 
   <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_2">❤</span class="footer--heart"> by <b class="blink_1">Hackers@UPC</b></footer>
