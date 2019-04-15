@@ -268,12 +268,12 @@
   <section class="section">
     <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_2">d</span>ule</h2>
     <p>Next editions will be on:</p>
-    <ul>
-      <li><strike>February 15th</strike></li>
-      <li><strike>March 1st</strike></li>
-      <li><strike>March 29th</strike></li>
-      <li>April 12th</li>
-      <li>May 24th</li>
+    <ul class="calendar" id="calendar">
+      <li class="calendar--item calendar--item__done"><time datetime="2019-02-15 20:00">February 15th</time></li>
+      <li class="calendar--item calendar--item__done"><time datetime="2019-03-01 20:00">March 1st</time></li>
+      <li class="calendar--item calendar--item__done"><time datetime="2019-03-29 20:00">March 29th</time></li>
+      <li class="calendar--item calendar--item__done"><time datetime="2019-04-12 20:00">April 12th</time></li>
+      <li class="calendar--item calendar--item__done"><time datetime="2019-05-24 20:00">May 24th</time></li>
     </ul>
   </section>
 
@@ -296,7 +296,8 @@
   <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_2">❤</span class="footer--heart"> by <b class="blink_1">Hackers@UPC</b></footer>
   
   <script>
-  
+  var calendar = document.getElementById("calendar");
+  // TODO: strike dates automatically
   </script>
 </body>
 </html>
