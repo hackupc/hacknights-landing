@@ -195,7 +195,19 @@
       max-width: 50%;
       margin: 2em;
     }
-    
+    /*   ---   calendar   ---   */
+    .calendar{
+      padding: 0;
+      list-style: none;
+    }
+    .calendar--item {
+      padding: 0.5em;
+    }
+    .calendar--item__done {
+      text-decoration: line-through;
+      opacity: 0.333;
+    }
+
     /*   ---   Footer   ---   */
     .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
     .footer { text-align: center; padding: 0.2em 0 0.3em; color: #7ECBD4; text-shadow: 0 0 0.7em currentColor; }
@@ -250,9 +262,9 @@
   
   <main class="hero">
     <h1 class="hero--title dim">Hac<span class="blink_2">k</span> Nig<span class="blink_1">h</span>ts</h1>
-    <span class="hero--date"><span class="hero--date--episode" id="hero--date--episode">Episode III</span> on <span class="hero--date--value" id="hero--date--value">Friday 29th of May at 8:00p.m.</span></span>
+    <span class="hero--date"><span class="hero--date--episode" id="episodeName">Episode III</span> on <span class="hero--date--value" id="episodeDate">Friday 29th of May at 8:00p.m.</span></span>
 
-    <a href="#" class="hero--button">Apply now</a>
+    <a href="#" class="hero--button" id="applyButton">Apply now</a>
   </main>
 
   <section class="section">
@@ -269,11 +281,11 @@
     <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_2">d</span>ule</h2>
     <p>Next editions will be on:</p>
     <ul class="calendar" id="calendar">
-      <li class="calendar--item calendar--item__done"><time datetime="2019-02-15 20:00">February 15th</time></li>
-      <li class="calendar--item calendar--item__done"><time datetime="2019-03-01 20:00">March 1st</time></li>
-      <li class="calendar--item calendar--item__done"><time datetime="2019-03-29 20:00">March 29th</time></li>
-      <li class="calendar--item calendar--item__done"><time datetime="2019-04-12 20:00">April 12th</time></li>
-      <li class="calendar--item calendar--item__done"><time datetime="2019-05-24 20:00">May 24th</time></li>
+      <li class="calendar--item"><time datetime="2019-02-15 20:00">February 15th</time></li>
+      <li class="calendar--item"><time datetime="2019-03-01 20:00">March 1st</time></li>
+      <li class="calendar--item"><time datetime="2019-03-29 20:00">March 29th</time></li>
+      <li class="calendar--item"><time datetime="2019-04-12 20:00">April 12th</time></li>
+      <li class="calendar--item"><time datetime="2019-05-24 20:00">May 24th</time></li>
     </ul>
   </section>
 
@@ -295,10 +307,30 @@
 
   <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_2">❤</span class="footer--heart"> by <b class="blink_1">Hackers@UPC</b></footer>
   
-  <script src="/events.js"></script>
+  <script src="/hackNights.js"></script>
   <script>
-    var calendar = document.getElementById("calendar");
-    // TODO: strike dates automatically
+    // Set up Hero info
+    const applyButton = document.getElementById("applyButton");
+    applyButton.href = nextEvent.applyUrl || hackNights.defaultEvent.applyUrl;
+
+    const episodeName = document.getElementById("episodeName");
+    episodeName.textContent = nextEvent.name || hackNights.defaultEvent.name;
+
+    const episodeDate = document.getElementById("episodeDate");
+    let nextEventDate = new Date(nextEvent.date);
+    const episodeDateFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    episodeDate.textContent = nextEventDate.toLocaleDateString('en-US', episodeDateFormatOptions) || hackNights.defaultEvent.date;
+
+    // Set up calendar
+    const calendar = document.getElementById("calendar");
+    const nowDate = new Date();
+    const calendarDateFormatOptions = { month: 'long', day: 'numeric' };
+    let html = "";
+    for (const event of hackNights.events) {
+      let date = new Date(event.date);
+      html += `<li class="calendar--item ${date < nowDate ? "calendar--item__done" : ""}"><time datetime="${event.date}">${date.toLocaleDateString('en-US', calendarDateFormatOptions)}</time></li>`;
+    }
+    calendar.innerHTML = html;
   </script>
 </body>
 </html>
