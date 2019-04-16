@@ -72,13 +72,21 @@
     </div>
   </section>
 
-  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_9">❤</span class="footer--heart"> by <b class="blink_10">Hackers@UPC</b></footer>
+  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_9">❤</span class="footer--heart"> by <b class="blink_10"><a href="https://hackersatupc.org/" hreflang="en">Hackers@UPC</a></b></footer>
   
   <script src="/hackNights.js"></script>
   <script>
     // Set up Hero info
     const applyButton = document.getElementById("applyButton");
-    applyButton.href = hackNights.nextEvent.applyUrl || hackNights.defaultEvent.applyUrl;
+    if(hackNights.nextEvent.applyUrl){
+      applyButton.href = hackNights.nextEvent.applyUrl;
+      applyButton.classList.remove('hero--button__inactive');
+      applyButton.textContent = 'Apply now';
+    }else{
+      applyButton.href = '#';
+      applyButton.classList.add('hero--button__inactive');
+      applyButton.textContent = 'Closed';
+    }
 
     const episodeName = document.getElementById("episodeName");
     episodeName.textContent = hackNights.nextEvent.name || hackNights.defaultEvent.name;
