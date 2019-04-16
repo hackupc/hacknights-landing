@@ -47,9 +47,13 @@
   <section class="section">
     <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_5">d</span>ule</h2>
     <p class="section--text">Next editions of the <span id="season">current season</span> will be on:</p>
-    <ul class="calendar" id="calendar">
-      <!-- <li class="calendar--item calendar--item__done"><time datetime="2019-02-15 20:00">February 15th</time></li> -->
-    </ul>
+    <div class="terminal">
+      <p class="terminal--item"><span><span class="terminal--green">hacker@HackNight</span>:<span class="terminal--blue">~</span>$ </span>more schedule.txt</p>
+      <ul class="terminal--list" id="terminal">
+        <!-- <li class="terminal--item terminal--list--item terminal--item__done"><time datetime="2019-02-15 20:00">February 15</time></li> -->
+      </ul>
+      <p class="terminal--item"><span><span class="terminal--green">hacker@HackNight</span>:<span class="terminal--blue">~</span>$ </span><span class="terminal--underscore">_</span></p>
+    </div>
   </section>
 
   <section class="section">
@@ -87,15 +91,15 @@
     const season = document.getElementById("season");
     season.textContent = hackNights.season || "current season";
    
-    // Set up calendar
-    const calendar = document.getElementById("calendar");
-    const calendarDateFormatOptions = { month: 'long', day: 'numeric' };
+    // Set up terminal
+    const terminal = document.getElementById("terminal");
+    const terminalDateFormatOptions = { month: 'long', day: 'numeric' };
     let html = "";
     for (const event of hackNights.events) {
       let date = new Date(event.date);
-      html += `<li class="calendar--item ${event.done ? "calendar--item__done" : ""} ${event.next ? "calendar--item__next" : ""}"><time datetime="${event.date}">${date.toLocaleDateString('en-US', calendarDateFormatOptions)}</time></li>`;
+      html += `<li class="terminal--item terminal--list--item${event.done ? " terminal--item__done" : ""}${event.next ? " terminal--item__next" : ""}"><time datetime="${event.date}">${date.toLocaleDateString('en-US', terminalDateFormatOptions)}</time>${!event.done && event.applyUrl ? ` <span class="terminal--gray">&gt;&gt;</span> <a class="terminal--${event.next ? 'orange' : 'gray'}" href="${event.applyUrl}">apply</a>` : ""}</li>`;
     }
-    calendar.innerHTML = html;
+    terminal.innerHTML = html;
   </script>
 </body>
 </html>

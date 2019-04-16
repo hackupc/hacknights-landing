@@ -164,6 +164,7 @@
 .section--text{
   max-width: 500px;
   margin: 1em auto;
+  padding: 0 2em;
   line-height: 1.333;
   letter-spacing: 0.025em;
   text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.667);
@@ -181,21 +182,39 @@
   max-width: 66.667%;
   margin: 2em;
 }
-/*   ---   calendar   ---   */
-.calendar{
-  padding: 0;
+/*   ---   terminal   ---   */
+.terminal{
+  background-color: #222;
+  color: #fff;
+  border-radius: 0.5em;
+  display: inline-block;
+  padding: 1em;
+  text-align: left;
+  margin: 0 1em 1em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.667);
+}
+.terminal--list{
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.calendar--item {
-  padding: 0.5em;
+.terminal--list--item::before{
+  content: ">";
+  margin-right: 0.6667em;
+  display:inline-block;
 }
-.calendar--item__done {
-  text-decoration: line-through;
-  opacity: 0.333;
+.terminal--item {
+  margin: 0;
+  line-height: 1.5;
 }
-.calendar--item__next {
-  color: #c0eca0;
-}
+.terminal--item__done { opacity: 0.333; text-decoration: line-through; }
+.terminal--item__next { color: #e100ff; }
+.terminal--green{ color: #6FE61B; }
+.terminal--blue{ color: blue; }
+.terminal--orange{ color: orange; }
+.terminal--white{ color: #fff; }
+.terminal--gray{ opacity: 0.333; color: #fff; }
+.terminal--underscore{ animation: blink_constant 1.5s infinite steps(2); }
 
 /*   ---   Footer   ---   */
 .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
@@ -220,6 +239,10 @@
 .blink_9{ animation: blink_1 6.74s 3.65s infinite; }
 .blink_10{animation: blink_2 5.48s 1.21s infinite; }
 
+@keyframes blink_constant{
+  0%  { opacity: 0.00; }
+  100%{ opacity: 1.00; }
+}
 @keyframes dim{
   0%  { opacity: 1.00; }
   1%  { opacity: 0.80; }
