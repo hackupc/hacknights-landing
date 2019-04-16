@@ -28,36 +28,32 @@
   <div class="spotlight"></div>
   
   <main class="hero">
-    <h1 class="hero--title dim">Hac<span class="blink_2">k</span> Nig<span class="blink_1">h</span>ts</h1>
+    <h1 class="hero--title dim">Hac<span class="blink_1">k</span> Nig<span class="blink_2">h</span>ts</h1>
     <span class="hero--date"><span class="hero--date--episode" id="episodeName">Episode III</span> on <span class="hero--date--value" id="episodeDate">Friday 29th of May at 8:00p.m.</span></span>
 
     <a href="#" class="hero--button" id="applyButton">Apply now</a>
   </main>
 
   <section class="section">
-    <h2 class="section--title section--title_cyan dim_1">WT<span class="blink_1">F</span> is Hack<span class="blink_2">N</span>ights</h2>
-    <p>HackNights are born with the aim of offering a collaborative work space where you can work freely in what you like the most. A place where you learn, grow and teach in community. No prize, no competition. Only you, your friends and your projects.</p>
+    <h2 class="section--title section--title_cyan dim_1">W<span class="blink_3">h</span>at</h2>
+    <p class="section--text">HackNights are born with the aim of offering a collaborative work space where you can work freely in what you like the most. A place where you learn, grow and teach in community. No prize, no competition. Only you, your friends and your projects.</p>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_green dim_2">Whe<span class="blink_1">r</span>e</h2>
-    <p>HackNights are held at Aula d’Estudis in Campus Nord, next to the Rector Gabriel Ferraté library.</p>
+    <h2 class="section--title section--title_green dim_2">Whe<span class="blink_4">r</span>e</h2>
+    <p class="section--text">HackNights are held at Aula d’Estudis in Campus Nord, next to the Rector Gabriel Ferraté library.</p>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_2">d</span>ule</h2>
-    <p>Next editions will be on:</p>
+    <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_5">d</span>ule</h2>
+    <p class="section--text">Next editions of the <span id="season">current season</span> will be on:</p>
     <ul class="calendar" id="calendar">
-      <li class="calendar--item"><time datetime="2019-02-15 20:00">February 15th</time></li>
-      <li class="calendar--item"><time datetime="2019-03-01 20:00">March 1st</time></li>
-      <li class="calendar--item"><time datetime="2019-03-29 20:00">March 29th</time></li>
-      <li class="calendar--item"><time datetime="2019-04-12 20:00">April 12th</time></li>
-      <li class="calendar--item"><time datetime="2019-05-24 20:00">May 24th</time></li>
+      <!-- <li class="calendar--item calendar--item__done"><time datetime="2019-02-15 20:00">February 15th</time></li> -->
     </ul>
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_white dim_4">Tha<span class="blink_1">n</span>k<span class="blink_2">s</span> To</h2>
+    <h2 class="section--title section--title_white dim_4">Tha<span class="blink_6">n</span>k<span class="blink_7">s</span> To</h2>
     <div class="brands">
       <a href="https://github.com/" target="_blank"  class="brands--link"><img src="/media/GitHub_logo.svg" alt="GitHub" class="brands--img"></a>
       <a href="https://www.fib.upc.edu/" target="_blank"  class="brands--link"><img src="/media/FIB-UPC_logo.png" alt="FIB-UPC" class="brands--img"></a>
@@ -65,14 +61,14 @@
   </section>
 
   <section class="section">
-    <h2 class="section--title section--title_yellow dim_5">Par<span class="blink_2">t</span>ners</h2>
+    <h2 class="section--title section--title_yellow dim_5">Par<span class="blink_8">t</span>ners</h2>
     <div class="brands">
       <a href="http://www.zanuy.com/" target="_blank"  class="brands--link"><img src="/media/Zanuy_logo.png" alt="Zanuy" class="brands--img"></a>
       <a href="https://www.redbull.com/" target="_blank"  class="brands--link"><img src="/media/RedBull_logo.svg" alt="RedBull" class="brands--img"></a>
     </div>
   </section>
 
-  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_2">❤</span class="footer--heart"> by <b class="blink_1">Hackers@UPC</b></footer>
+  <footer class="footer dim"><b>Made</b> with <span class="footer--heart blink_9">❤</span class="footer--heart"> by <b class="blink_10">Hackers@UPC</b></footer>
   
   <script src="/hackNights.js"></script>
   <script>
@@ -82,19 +78,22 @@
 
     const episodeName = document.getElementById("episodeName");
     episodeName.textContent = hackNights.nextEvent.name || hackNights.defaultEvent.name;
-
+    
     const episodeDate = document.getElementById("episodeDate");
     let nextEventDate = new Date(hackNights.nextEvent.date);
     const episodeDateFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
     episodeDate.textContent = nextEventDate.toLocaleDateString('en-US', episodeDateFormatOptions) || hackNights.defaultEvent.date;
-
+    
+    const season = document.getElementById("season");
+    season.textContent = hackNights.season || "current season";
+   
     // Set up calendar
     const calendar = document.getElementById("calendar");
     const calendarDateFormatOptions = { month: 'long', day: 'numeric' };
     let html = "";
     for (const event of hackNights.events) {
       let date = new Date(event.date);
-      html += `<li class="calendar--item ${event.done ? "calendar--item__done" : ""}"><time datetime="${event.date}">${date.toLocaleDateString('en-US', calendarDateFormatOptions)}</time></li>`;
+      html += `<li class="calendar--item ${event.done ? "calendar--item__done" : ""} ${event.next ? "calendar--item__next" : ""}"><time datetime="${event.date}">${date.toLocaleDateString('en-US', calendarDateFormatOptions)}</time></li>`;
     }
     calendar.innerHTML = html;
   </script>

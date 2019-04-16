@@ -10,6 +10,7 @@ var hackNights = {
     applyUrl: "#",
     schedule: undefined,
     done: false,
+    next: false,
   }, 
   events: [
     {
@@ -62,9 +63,12 @@ hackNights.nextEvent = hackNights.events.reduce((event, next) => {
   if(date > now && date < dateNext) return event;
   else return next;
 },  hackNights.events[0]);
+hackNights.nextEvent.next = true; 
 
-// set done attribute
+// set done and next attribute
 for (const event of hackNights.events) {
   let date = new Date(event.date);
   event.done = date < now;
+
+  event.next = event == hackNights.nextEvent; 
 }

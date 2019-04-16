@@ -31,7 +31,8 @@
   --neon-glow-yellow: #F7DF01;
 }
 .body{
-  font-family: 'Montserrat', -apple-system, 'Roboto', sans-serif;
+  /* font-family: 'Montserrat', -apple-system, 'Roboto', sans-serif; */
+  font-family: 'Inconsolata', monospace;
   margin: 0;
   background: #553e6c url("media/wall3.jpg") center/300px repeat;
   /* background-blend-mode: multiply; */
@@ -80,7 +81,6 @@
   will-change: opacity;
 }
 .hero--date{
-  font-family: 'Inconsolata', monospace;
   line-height: 1.75;
   z-index: 1;
   text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.667);
@@ -128,7 +128,6 @@
 /*   ---   Sections   ---   */
 .section{
   min-height: 10em;
-  padding: 2em;
   text-align: center;
   color: white;
 }
@@ -139,7 +138,7 @@
   text-shadow: 0 0 1em var(--neon-glow-white), 0 0 2em var(--neon-glow-white);
   letter-spacing: 1px;
   position: relative;
-  margin: 0 auto;
+  margin: 1em auto 0;
   display: inline-block;
 }
 .section--title::before{
@@ -162,6 +161,13 @@
 .section--title_yellow::before{box-shadow: 0 0 1em var(--neon-glow-yellow), 0 0 0.1em var(--neon-glow-yellow), 0 0 2em var(--neon-glow-yellow);}
 
 /*   ---   Sections Content   ---   */
+.section--text{
+  max-width: 500px;
+  margin: 1em auto;
+  line-height: 1.333;
+  letter-spacing: 0.025em;
+  text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.667);
+}
 .brands{
   display: flex;
   justify-content: space-evenly;
@@ -172,7 +178,7 @@
 }
 .brands--img{
   width: 200px;
-  max-width: 50%;
+  max-width: 66.667%;
   margin: 2em;
 }
 /*   ---   calendar   ---   */
@@ -187,6 +193,9 @@
   text-decoration: line-through;
   opacity: 0.333;
 }
+.calendar--item__next {
+  color: #c0eca0;
+}
 
 /*   ---   Footer   ---   */
 .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
@@ -195,13 +204,22 @@
 
 
 /*   ---   Animations   ---   */
-.dim    { animation: dim 4.17s infinite; }
+.dim    { animation: dim 4.17s 0.00s infinite; }
 .dim_2  { animation: dim 4.57s 0.97s infinite; }
 .dim_3  { animation: dim 3.91s 1.24s infinite; }
 .dim_4  { animation: dim 4.22s 3.12s infinite; }
 .dim_5  { animation: dim 3.81s 2.71s infinite; }
-.blink_1{ animation: blink_1 5.32s infinite; }
-.blink_2{ animation: blink_2 8.19s 0s infinite; }
+.blink_1{ animation: blink_1 5.32s 0.00s infinite; }
+.blink_2{ animation: blink_2 8.19s 0.00s infinite; }
+.blink_3{ animation: blink_1 3.82s 0.00s infinite; }
+.blink_4{ animation: blink_2 6.12s 0.98s infinite; }
+.blink_5{ animation: blink_1 6.74s 0.43s infinite; }
+.blink_6{ animation: blink_2 5.48s 2.65s infinite; }
+.blink_7{ animation: blink_1 7.44s 1.26s infinite; }
+.blink_8{ animation: blink_2 6.28s 4.76s infinite; }
+.blink_9{ animation: blink_1 6.74s 3.65s infinite; }
+.blink_10{animation: blink_2 5.48s 1.21s infinite; }
+
 @keyframes dim{
   0%  { opacity: 1.00; }
   1%  { opacity: 0.80; }
