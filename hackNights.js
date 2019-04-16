@@ -9,6 +9,7 @@ var hackNights = {
     theme: { emoji: "🌙", name: "undefined" },
     applyUrl: "#",
     schedule: undefined,
+    done: false,
   }, 
   events: [
     {
@@ -48,13 +49,22 @@ var hackNights = {
       theme: { emoji: "💗", name: "Sex" },
     },
   ],
+  nextEvent: undefined,
 };
 
-var nextEvent = hackNights.events.reduce((event, next) => {
+let now = new Date();
+
+// set the next event 
+hackNights.nextEvent = hackNights.events.reduce((event, next) => {
   let date = new Date(event.date);
   let dateNext = new Date(next.date);
-  let now = new Date();
 
   if(date > now && date < dateNext) return event;
   else return next;
 },  hackNights.events[0]);
+
+// set done attribute
+for (const event of hackNights.events) {
+  let date = new Date(event.date);
+  event.done = date < now;
+}
