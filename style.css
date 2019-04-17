@@ -29,6 +29,8 @@
   --neon-glow-orange: #F77A01;
   --neon-yellow: #F7DF01;
   --neon-glow-yellow: #F7DF01;
+
+  --ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 a{ color: inherit; text-decoration: none;}
 .body{
@@ -196,6 +198,7 @@ a{ color: inherit; text-decoration: none;}
   padding: 1em;
   text-align: left;
   margin: 0 1em 1em;
+  max-width: 700px;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.667);
 }
 .terminal--list{
@@ -203,10 +206,28 @@ a{ color: inherit; text-decoration: none;}
   padding: 0;
   margin: 0;
 }
+.terminal--list__2{
+  padding-left: 2em;
+  height: 0;
+  /* Width is commented because it moves to much the terminal */
+  /* width: 0; */
+  overflow: hidden;
+}
+.terminal--list--item{
+  cursor: pointer;
+}
+.terminal--list--item__active{
+  height: auto;
+  /* width: auto; */
+}
 .terminal--list--item::before{
   content: ">";
   margin-right: 0.6667em;
   display:inline-block;
+  transition: transform 300ms var(--ease-bounce);
+}
+.terminal--list--item__active::before{
+  transform: rotate(90deg);
 }
 .terminal--item {
   margin: 0;
