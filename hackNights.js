@@ -5,7 +5,6 @@ var hackNights = {
     date: "undefined",
     name: "Episode Extra",
     summary: "",
-    place: "Aula d'Estudis from A4",
     theme: { emoji: "🌙", name: "undefined" },
     applyUrl: "#",
     schedule: undefined,
@@ -31,7 +30,7 @@ var hackNights = {
       schedule: [
         { hour: "19:45", name:"Doors opening" },
         { hour: "20:30", name:"Opening speach" },
-        { hour: "22:00", name:"Workshop: Intro to practical React" },
+        { hour: "22:00", name:"Workshop: Intro Node" },
         { hour: "23:00", name:"Midnight Snack" },
         { hour: "00:00", name:"Bottle Flip Challenge" },
         { hour: "04:00", name:"Project Demos (Free)" },
