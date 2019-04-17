@@ -47,7 +47,7 @@ var hackNights = {
     {
       date: "2019-05-24 20:00",
       name: "Episode V",
-      theme: { emoji: "💗", name: "Sex" },
+      theme: { emoji: "💗", name: "Sextech" },
     },
   ],
   nextEvent: undefined,

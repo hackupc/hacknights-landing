@@ -32,7 +32,7 @@
 
   --ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-a{ color: inherit; text-decoration: none;}
+a{ color: inherit;}
 .body{
   /* font-family: 'Montserrat', -apple-system, 'Roboto', sans-serif; */
   font-family: 'Inconsolata', monospace;
@@ -183,6 +183,9 @@ a{ color: inherit; text-decoration: none;}
 .brands{
   padding: 0 2em;
 }
+.brands--link{
+  text-decoration: none;
+}
 .brands--img{
   width: 200px;
   max-width: 66.667%;
@@ -246,7 +249,9 @@ a{ color: inherit; text-decoration: none;}
 .footer--heart { height: 1em; vertical-align: -0.075em; transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29); }
 .footer { text-align: center; padding: 0.2em 0 0.3em; color: #7ECBD4; text-shadow: 0 0 0.7em currentColor; }
 .footer:hover .footer--heart { transform: scale(1.333); }
-
+.footer--legal{opacity: 0.75; color: white; margin-bottom: 1em;}
+.footer--legal--link{opacity: 0.5; transition: opacity 20ms ease-in;}
+.footer--legal--link:hover{opacity: 1;}
 
 /*   ---   Animations   ---   */
 .dim    { animation: dim 4.17s 0.00s infinite; }
