@@ -53,6 +53,17 @@ var hackNights = {
   nextEvent: undefined,
 };
 
+// sort events
+function compare(a,b) {
+  let aDate = new Date(a.date);
+  let bDate = new Date(b.date);
+  if (aDate < bDate) return -1;
+  if (aDate > bDate) return 1;
+  return 0;
+}
+
+hackNights.events.sort(compare);
+
 let now = new Date();
 
 // set the next event 
