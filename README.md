@@ -1,3 +1,5 @@
-# hack-nights-landing
+# Hack Nights - Landing page
+[https://hacknights.dev/](https://hacknights.dev/)
 
-[https://hackupc.github.io/hack-nights-landing/](https://hackupc.github.io/hack-nights-landing/)
+## How to change the content?
+There is a [hackNights.js](https://github.com/hackupc/hack-nights-landing/blob/master/hackNights.js) file in the root that contains all the data that can be edited. 
