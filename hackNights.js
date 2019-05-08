@@ -63,6 +63,7 @@ var hackNights = {
     {
       date: "2019-05-24 20:00",
       name: "Episode V",
+      applyUrl: "https://hackersatupc.typeform.com/to/s4H6OD",
       theme: { emoji: "💗", name: "Sextech" },
     },
   ],
