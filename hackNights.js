@@ -65,6 +65,11 @@ var hackNights = {
       name: "Episode V",
       applyUrl: "https://hackersatupc.typeform.com/to/s4H6OD",
       theme: { emoji: "💗", name: "Sextech" },
+      schedule: [
+        { hour: "19:45", name: "Doors opening" },
+        { hour: "22:00", name: "Workshop: To be confirmed" },
+        { hour: "06:00", name: "Closing" },
+      ],
     },
   ],
   nextEvent: undefined,
