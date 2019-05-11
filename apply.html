@@ -19,8 +19,12 @@
 	  
 </head>
 <body>
-<script src="/hackNights.js"></script>
-<script>
-  window.location.replace(hackNights.nextEvent.applyUrl);
-</script>
+  <script src="/hackNights.js"></script>
+  <script>
+    if(hackNights.nextEvent.applyUrl){
+      window.location.replace(hackNights.nextEvent.applyUrl);
+    }else{
+      window.location.replace("/");
+    }
+  </script>
 </body>
