@@ -41,7 +41,7 @@ var hackNights = {
       summary: "",
     },
     {
-      date: "2019-05-22 20:00",
+      date: "2020-05-22 20:00",
       name: "Episode III",
       theme: { emoji: "🎶", name: "Music" },
       schedule: [
