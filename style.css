@@ -37,7 +37,7 @@ a{ color: inherit;}
   /* font-family: 'Montserrat', -apple-system, 'Roboto', sans-serif; */
   font-family: 'Inconsolata', monospace;
   margin: 0;
-  background: #553e6c url("media/wall3.jpg") center/300px repeat;
+  background: #553e6c url("media/wall3.jpg") top/300px repeat;
   /* background-blend-mode: multiply; */
 }
 .spotlight{
