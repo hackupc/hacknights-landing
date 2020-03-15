@@ -12,7 +12,7 @@ var hackNights = {
     next: false,
   }, 
   events: [
-    {
+/*    {
       date: "2020-03-27 20:00",
       name: "Episode I",
       theme: { emoji: "💻", name: "Intro" },
@@ -25,7 +25,7 @@ var hackNights = {
         { hour: "04:00", name: "Closing" },
       ],
       summary: "",
-    },
+    },*/
     {
       date: "2020-04-17 20:00",
       name: "Episode II",
