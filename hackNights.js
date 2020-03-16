@@ -18,7 +18,7 @@ var hackNights = {
       theme: { emoji: "💻", name: "Intro" },
       schedule: [
         { hour: "20:00", name: "Check-in" },
-        { hour: "20:30", name: "Opening speach" },
+        { hour: "20:30", name: "Opening speech" },
         { hour: "23:00", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
 //      { hour: "01:00", name: "Talk (per disreure)" },
@@ -32,7 +32,7 @@ var hackNights = {
       theme: { emoji: "🎨", name: "Creativity" },
       schedule: [
         { hour: "20:00", name: "Check-in" },
-        { hour: "20:30", name: "Opening speach" },
+        { hour: "20:30", name: "Opening speech" },
         { hour: "23:00", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
 //      { hour: "01:00", name: "Talk (per disreure)" },
@@ -46,7 +46,7 @@ var hackNights = {
       theme: { emoji: "🎶", name: "Music" },
       schedule: [
         { hour: "20:00", name: "Check-in" },
-        { hour: "20:30", name: "Opening speach" },
+        { hour: "20:30", name: "Opening speech" },
         { hour: "23:00", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
 //      { hour: "01:00", name: "Talk (per disreure)" },
