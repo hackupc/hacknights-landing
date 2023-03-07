@@ -13,7 +13,7 @@ var hackNights = {
   }, 
   events: [
     {
-      date: "2020-04-17 21:00",
+      date: "2023-03-24 21:00",
       name: "Episode I",
       theme: { emoji: "🎮", name: "Videogames" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-1",
@@ -27,7 +27,7 @@ var hackNights = {
       summary: "We won't be able to provide dinner, but you will be allowed to eat in the room. However, we will provide snacks and beverage to hack all night long! If possible, we ask you to bring your own plastic cup in order to refill your drink (long live to recycling ♻😊)."
     },
     {
-      date: "2020-04-21 21:00",
+      date: "2023-04-17 21:00",
       name: "Episode II",
       theme: { emoji: "🚩", name: "CRFs" },
       schedule: [
