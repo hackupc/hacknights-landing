@@ -46,28 +46,43 @@
   
   <main class="hero">
     <h1 class="hero--title dim">Hac<span class="blink_1">k</span> Nig<span class="blink_2">h</span>ts</h1>
-    <span class="hero--date"><span class="hero--date--episode" id="episodeName">Episode III</span> on <span class="hero--date--value" id="episodeDate">Friday 29th of May at 8:00p.m.</span></span>
+    <span class="hero--date"><span class="hero--date--episode" id="episodeName">Episode I</span> - <span class="hero--date--value" id="episodeDate">Friday, 24th of March at 9:00p.m.</span></span>
 
     <a href="" class="hero--button" id="applyButton">Apply now</a>
   </main>
 
   <section class="section">
     <h2 class="section--title section--title_cyan dim_1">W<span class="blink_3">h</span>at</h2>
-    <p class="section--text">HackNights are born with the aim of offering a collaborative work space where you can work freely in what you like the most. A place where you learn, grow and teach in community. No prize, no competition. Only you, your friends and your projects.</p>
+    <p class="section--text">HackNights are born with the aim of offering a collaborative work space where you can work freely on whatever you like the most. A place where you learn, grow and teach in community. No prize, no competition. Only you, your friends and your projects.</p>
   </section>
 
   <section class="section">
     <h2 class="section--title section--title_green dim_2">Whe<span class="blink_4">r</span>e</h2>
-    <p class="section--text">HackNights are held at <b>Sala Àgora<b>, next to the Rector Gabriel Ferraté library, in UPC Campus Nord at Barcelona. </p>
+    <p class="section--text">HackNights are held at <b>Sala d'estudis<b>, in A3 building, in UPC Campus Nord at Barcelona. </p>
   </section>
 
   <section class="section">
     <h2 class="section--title section--title_orange dim_3">Sche<span class="blink_5">d</span>ule</h2>
-    <p class="section--text">Next editions of the <span id="season">current season</span> will be on:</p>
+    <p class="section--text">Next editions of the <span id="season">2023 season</span> will be on:</p>
     <div class="terminal">
       <p class="terminal--item"><span><span class="terminal--green">hacker@HackNight</span>:<span class="terminal--blue">~</span>$ </span>more schedule.txt</p>
       <ul class="terminal--list" id="terminal">
-        <!-- <li class="terminal--item terminal--list--item terminal--item__done"><time datetime="2019-02-15 20:00">February 15</time></li> -->
+        <li onclick="toggleCollapse(this);" class="terminal--item terminal--list--item terminal--item__next terminal--list--item__active">🎮 <time datetime="2020-05-22 20:00">March 24th</time> <span class="terminal--gray">-</span> Episode I<span class="terminal--gray">,</span> Videogames</li>
+        <ul class="terminal--list terminal--list__2 terminal--list--item__active">
+          <li class="terminal--item terminal--list--item__2">21:00 <span class="terminal--gray">-</span> Check-in</li>
+          <li class="terminal--item terminal--list--item__2">21:15 <span class="terminal--gray">-</span> Opening speech</li>
+          <li class="terminal--item terminal--list--item__2">21:30 <span class="terminal--gray">-</span> Workshop</li>
+          <li class="terminal--item terminal--list--item__2">00:00 <span class="terminal--gray">-</span> Midnight Snack</li>
+          <li class="terminal--item terminal--list--item__2">05:00 <span class="terminal--gray">-</span> Closing</li>
+        </ul>
+        <li onclick="toggleCollapse(this);" class="terminal--item terminal--list--item terminal--blue">🚩 <time datetime="2020-05-22 20:00">April 21th</time> <span class="terminal--gray">-</span> Episode II<span class="terminal--gray">,</span> CTFs</li>
+        <ul class="terminal--list terminal--list__2">
+          <li class="terminal--item terminal--list--item__2">21:00 <span class="terminal--gray">-</span> Check-in</li>
+          <li class="terminal--item terminal--list--item__2">21:15 <span class="terminal--gray">-</span> Opening speech</li>
+          <li class="terminal--item terminal--list--item__2">21:30 <span class="terminal--gray">-</span> Workshop</li>
+          <li class="terminal--item terminal--list--item__2">00:00 <span class="terminal--gray">-</span> Midnight Snack</li>
+          <li class="terminal--item terminal--list--item__2">05:00 <span class="terminal--gray">-</span> Closing</li>
+        </ul>
       </ul>
       <p class="terminal--item"><span><span class="terminal--green">hacker@HackNight</span>:<span class="terminal--blue">~</span>$ </span><span class="terminal--underscore">_</span></p>
     </div>
@@ -76,23 +91,22 @@
   <section class="section">
     <h2 class="section--title section--title_white dim_4">Tha<span class="blink_6">n</span>k<span class="blink_7">s</span> To</h2>
     <div class="brands">
-      <!--<a href="https://github.com/" target="_blank" class="brands--link"><img src="/media/GitHub_logo_grafity.png" alt="GitHub" class="brands--img"></a>-->
       <a href="https://www.fib.upc.edu/" target="_blank" class="brands--link"><img src="/media/FIB-UPC_logo_grafity.png" alt="FIB-UPC" class="brands--img"></a>
     </div>
   </section>
 
-  <section class="section">
+  <!-- <section class="section">
     <h2 class="section--title section--title_yellow dim_5">Par<span class="blink_8">t</span>ners</h2>
     <div class="brands">
-      <!--<a href="http://www.zanuy.com/" target="_blank" class="brands--link"><img src="/media/Zanuy_logo_grafity.png" alt="Zanuy" class="brands--img"></a>-->
+      <a href="http://www.zanuy.com/" target="_blank" class="brands--link"><img src="/media/Zanuy_logo_grafity.png" alt="Zanuy" class="brands--img"></a>
     </div>
-  </section>
+  </section> -->
 
   <footer class="footer dim">
     <div class="footer--legal">
-      <a target="_blank" href="https://hackupc.com/legal_notice/" hreflang="en" class="footer--legal--link">Legal notice</a> |
-      <a target="_blank" href="https://hackersatupc.org/assets/docs/HackNights_Terms_And_Conditions.pdf" hreflang="en" class="footer--legal--link">Terms and conditions</a> |
-      <a target="_blank" href="https://hackersatupc.org/assets/docs/Privacy_And_Cookies_Policy.pdf" hreflang="en" class="footer--legal--link">Privacy and cookies</a>
+      <a target="_blank" href="https://legal.hackersatupc.org/hackupc/legal_notice" hreflang="en" class="footer--legal--link">Legal notice</a> |
+      <a target="_blank" href="https://legal.hackersatupc.org/hacknights/hacknights_terms_and_conditions" hreflang="en" class="footer--legal--link">Terms and conditions</a> |
+      <a target="_blank" href="https://legal.hackersatupc.org/hacknights/hacknights_privacy_and_cookies_policy" hreflang="en" class="footer--legal--link">Privacy and cookies</a>
     </div>
     <div>
       <b>Made</b> with <span class="footer--heart blink_9">❤</span class="footer--heart"> by <b class="blink_10"><a href="https://hackersatupc.org/" hreflang="en">Hackers@UPC</a></b>
