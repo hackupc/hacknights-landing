@@ -19,23 +19,23 @@ var hackNights = {
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-1",
       schedule: [
         { hour: "21:00", name: "Registre" },
-        { hour: "21:15", name: "Ceremonia d'opertura" },
+        { hour: "21:15", name: "Ceremònia d'opertura" },
         { hour: "21:30", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
-        { hour: "05:00", name: "Ceremonia de clausura" },
+        { hour: "05:00", name: "Ceremònia de clausura" },
       ],
       summary: "We won't be able to provide dinner, but you will be allowed to eat in the room. However, we will provide snacks and beverage to hack all night long! If possible, we ask you to bring your own plastic cup in order to refill your drink (long live to recycling ♻😊)."
     },
     {
       date: "2023-04-17 21:00",
       name: "Episode II",
-      theme: { emoji: "🚩", name: "CRFs" },
+      theme: { emoji: "🚩", name: "CTFs" },
       schedule: [
         { hour: "21:00", name: "Registre" },
-        { hour: "21:15", name: "Ceremonia d'opertura" },
+        { hour: "21:15", name: "Ceremònia d'opertura" },
         { hour: "21:30", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
-        { hour: "05:00", name: "Ceremonia de clausura" },
+        { hour: "05:00", name: "Ceremònia de clausura" },
       ],
       summary: "",
     },
