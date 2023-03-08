@@ -144,7 +144,7 @@
     let html = "";
     for (const event of hackNights.events) {
       let date = new Date(event.date);
-      html += `<li onclick="toggleCollapse(this);" class="terminal--item terminal--list--item${event.done ? " terminal--item__done" : ""}${event.next ? " terminal--item__next terminal--list--item__active" : ""}">${event.theme.emoji} <time datetime="${event.date}">${date.toLocaleDateString('en-US', terminalDateFormatOptions)}</time> <span class="terminal--gray">-</span> ${event.name}<span class="terminal--gray">,</span> ${event.theme.name}${!event.done && event.applyUrl ? ` <span class="terminal--gray">&gt;&gt;</span> <a class="terminal--${event.next ? 'link' : 'gray'}" href="${event.applyUrl}">apply</a>` : ""}</li>`;
+      html += `<li onclick="toggleCollapse(this);" class="terminal--item terminal--list--item${event.done ? " terminal--item__done" : ""}${event.next ? " terminal--item__next terminal--list--item__active" : ""}">${event.theme.emoji} <time datetime="${event.date}">${date.toLocaleDateString('ca-ES', terminalDateFormatOptions)}</time> <span class="terminal--gray">-</span> ${event.name}<span class="terminal--gray">,</span> ${event.theme.name}${!event.done && event.applyUrl ? ` <span class="terminal--gray">&gt;&gt;</span> <a class="terminal--${event.next ? 'link' : 'gray'}" href="${event.applyUrl}">apunta't</a>` : ""}</li>`;
       if(event.schedule){
         html += `<ul class="terminal--list terminal--list__2${event.next ? ' terminal--list--item__active' : ''}">`;
         for (const task of event.schedule) {
