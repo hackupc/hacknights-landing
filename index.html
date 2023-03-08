@@ -133,7 +133,7 @@
     const episodeDate = document.getElementById("episodeDate");
     let nextEventDate = new Date(hackNights.nextEvent.date);
     const episodeDateFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-    episodeDate.textContent = nextEventDate.toLocaleDateString('es-ES', episodeDateFormatOptions) || hackNights.defaultEvent.date;
+    episodeDate.textContent = nextEventDate.toLocaleDateString('ca-ES', episodeDateFormatOptions) || hackNights.defaultEvent.date;
     
     const season = document.getElementById("season");
     season.textContent = hackNights.season || "current season";

@@ -14,7 +14,7 @@ var hackNights = {
   events: [
     {
       date: "2023-03-24 21:00",
-      name: "Episode I",
+      name: "Episodi I",
       theme: { emoji: "🎮", name: "Videogames" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-1",
       schedule: [
@@ -28,7 +28,7 @@ var hackNights = {
     },
     {
       date: "2023-04-17 21:00",
-      name: "Episode II",
+      name: "Episodi II",
       theme: { emoji: "🚩", name: "CTFs" },
       schedule: [
         { hour: "21:00", name: "Registre" },
