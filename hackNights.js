@@ -1,6 +1,6 @@
 // This file declares a variable with all HackNights info
 var hackNights = {
-  season: "Spring 2023 Season",
+  season: "primavera 2023",
   defaultEvent: {
     date: "undefined",
     name: "Episode Extra",
@@ -24,7 +24,7 @@ var hackNights = {
         { hour: "00:00", name: "Midnight Snack" },
         { hour: "05:00", name: "Ceremònia de clausura" },
       ],
-      summary: "We won't be able to provide dinner, but you will be allowed to eat in the room. However, we will provide snacks and beverage to hack all night long! If possible, we ask you to bring your own plastic cup in order to refill your drink (long live to recycling ♻😊)."
+      summary: ""
     },
     {
       date: "2023-04-17 21:00",
