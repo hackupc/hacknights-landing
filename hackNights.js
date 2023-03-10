@@ -1,6 +1,6 @@
 // This file declares a variable with all HackNights info
 var hackNights = {
-  season: "Spring 2020 Season", 
+  season: "primavera 2023",
   defaultEvent: {
     date: "undefined",
     name: "Episode Extra",
@@ -12,45 +12,30 @@ var hackNights = {
     next: false,
   }, 
   events: [
-/*    {
-      date: "2020-03-27 20:00",
-      name: "Episode I",
-      theme: { emoji: "💻", name: "Intro" },
-      schedule: [
-        { hour: "20:00", name: "Check-in" },
-        { hour: "20:30", name: "Opening speech" },
-        { hour: "23:00", name: "Workshop" },
-        { hour: "00:00", name: "Midnight Snack" },
-//      { hour: "01:00", name: "Talk (per disreure)" },
-        { hour: "04:00", name: "Closing" },
-      ],
-      summary: "",
-    },*/
     {
-      date: "2020-04-17 20:00",
-      name: "Episode II",
-      theme: { emoji: "🎨", name: "Creativity" },
+      date: "2023-03-24 21:00",
+      name: "Episodi I",
+      theme: { emoji: "🎮", name: "Videojocs" },
+      applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-1",
       schedule: [
-        { hour: "20:00", name: "Check-in" },
-        { hour: "20:30", name: "Opening speech" },
-        { hour: "23:00", name: "Workshop" },
+        { hour: "21:00", name: "Registre" },
+        { hour: "21:15", name: "Cerimònia d'obertura" },
+        { hour: "21:30", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
-//      { hour: "01:00", name: "Talk (per disreure)" },
-        { hour: "04:00", name: "Closing" },
+        { hour: "05:00", name: "Cerimònia de clausura" },
       ],
-      summary: "",
+      summary: ""
     },
     {
-      date: "2020-05-22 20:00",
-      name: "Episode III",
-      theme: { emoji: "🎶", name: "Music" },
+      date: "2023-04-17 21:00",
+      name: "Episodi II",
+      theme: { emoji: "🚩", name: "CTFs" },
       schedule: [
-        { hour: "20:00", name: "Check-in" },
-        { hour: "20:30", name: "Opening speech" },
-        { hour: "23:00", name: "Workshop" },
+        { hour: "21:00", name: "Registre" },
+        { hour: "21:15", name: "Cerimònia d'obertura" },
+        { hour: "21:30", name: "Workshop" },
         { hour: "00:00", name: "Midnight Snack" },
-//      { hour: "01:00", name: "Talk (per disreure)" },
-        { hour: "04:00", name: "Closing" },
+        { hour: "05:00", name: "Cerimònia de clausura" },
       ],
       summary: "",
     },
