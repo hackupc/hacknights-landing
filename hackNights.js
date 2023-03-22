@@ -20,7 +20,7 @@ var hackNights = {
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
-        { hour: "21:30", name: "Workshop" },
+        { hour: "21:30", name: "Game Night: Interactive learning workshop" },
         { hour: "00:00", name: "Midnight Snack" },
         { hour: "05:00", name: "Cerimònia de clausura" },
       ],
