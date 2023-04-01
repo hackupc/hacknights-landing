@@ -16,7 +16,6 @@ var hackNights = {
       date: "2023-03-24 21:00",
       name: "Episodi I",
       theme: { emoji: "🎮", name: "Videojocs" },
-      applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-1",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
@@ -29,7 +28,8 @@ var hackNights = {
     {
       date: "2023-04-21 21:00",
       name: "Episodi II",
-      theme: { emoji: "🚩", name: "CTFs" },
+      theme: { emoji: "🚩", name: "TBD" },
+      applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-2",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
