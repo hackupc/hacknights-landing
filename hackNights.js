@@ -26,7 +26,7 @@ var hackNights = {
       summary: ""
     },
     {
-      date: "2023-04-21 21:00",
+      date: "2023-04-28 21:00",
       name: "Episodi II",
       theme: { emoji: "🚩", name: "CTFs" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-2",
