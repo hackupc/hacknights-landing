@@ -1,6 +1,6 @@
 // This file declares a variable with all HackNights info
 var hackNights = {
-  season: "primavera 2023",
+  season: "2023",
   defaultEvent: {
     date: "undefined",
     name: "Episode Extra",
