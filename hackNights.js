@@ -54,7 +54,7 @@ var hackNights = {
       summary: "",
     },
     {
-      date: "2023-11-19 21:00",
+      date: "2023-11-17 21:00",
       name: "Episodi IV",
       theme: { emoji: "❓", name: "TBD" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-4",
