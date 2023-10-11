@@ -42,7 +42,7 @@ var hackNights = {
     {
       date: "2023-09-29 21:00",
       name: "Episodi III",
-      theme: { emoji: "❓", name: "TBD" },
+      theme: { emoji: "👨‍💻", name: "" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-3",
       schedule: [
         { hour: "21:00", name: "Registre" },
