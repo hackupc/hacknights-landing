@@ -42,8 +42,22 @@ var hackNights = {
     {
       date: "2023-09-29 21:00",
       name: "Episodi III",
-      theme: { emoji: "❓", name: "TBD" },
+      theme: { emoji: "👨‍💻", name: "" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-3",
+      schedule: [
+        { hour: "21:00", name: "Registre" },
+        { hour: "21:15", name: "Cerimònia d'obertura" },
+        { hour: "21:30", name: "Workshop" },
+        { hour: "00:00", name: "Midnight Snack" },
+        { hour: "05:00", name: "Cerimònia de clausura" },
+      ],
+      summary: "",
+    },
+    {
+      date: "2023-11-17 21:00",
+      name: "Episodi IV",
+      theme: { emoji: "❓", name: "TBD" },
+      applyUrl: "https://hackersatupc.typeform.com/ht-2023-ep-4",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
