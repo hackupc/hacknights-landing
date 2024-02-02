@@ -15,12 +15,12 @@ var hackNights = {
     {
       date: "2024-02-23 21:00",
       name: "Season 2024 - Episodi I",
-      theme: { emoji: "🌐", name: "Webdev" },
+      theme: { emoji: "🌐", name: "Web Development 101" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2024-ep-1",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
-        { hour: "21:30", name: "Workshop: Crea la teva primera web." },
+        { hour: "21:30", name: "Workshop: Crea la teva primera pàgina web." },
         { hour: "00:00", name: "Midnight Snack" },
         { hour: "05:00", name: "Cerimònia de clausura" },
       ],
