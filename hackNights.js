@@ -14,7 +14,7 @@ var hackNights = {
   events: [
     {
       date: "2024-02-23 21:00",
-      name: "Season 2024 - Episodi I",
+      name: "Episodi I (2024)",
       theme: { emoji: "🌐", name: "Web Development 101" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2024-ep-1",
       schedule: [
