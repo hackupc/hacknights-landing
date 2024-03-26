@@ -13,7 +13,7 @@ var hackNights = {
   }, 
   events: [
     {
-      date: "2024-05-19 21:00",
+      date: "2024-04-19 21:00",
       name: "Episodi II (2024)",
       theme: { emoji: "🚩", name: "CTFs" },
       applyUrl: "https://hackersatupc.typeform.com/hn-episode-2",
