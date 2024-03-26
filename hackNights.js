@@ -13,6 +13,20 @@ var hackNights = {
   }, 
   events: [
     {
+      date: "2024-04-19 21:00",
+      name: "Episodi II (2024)",
+      theme: { emoji: "🚩", name: "CTFs" },
+      applyUrl: "https://hackersatupc.typeform.com/hn-episode-2",
+      schedule: [
+        { hour: "21:00", name: "Registre" },
+        { hour: "21:15", name: "Cerimònia d'obertura" },
+        { hour: "21:30", name: "Workshop: Iniciació als CTFs" },
+        { hour: "00:00", name: "Midnight Snack" },
+        { hour: "05:00", name: "Cerimònia de clausura" },
+      ],
+      summary: ""
+    },
+    {
       date: "2024-02-23 21:00",
       name: "Episodi I (2024)",
       theme: { emoji: "🌐", name: "Web Development 101" },
