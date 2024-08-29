@@ -16,7 +16,7 @@ var hackNights = {
       date: "2024-09-27 21:00",
       name: "Episodi III (2024)",
       theme: { emoji: "💻", name: "Hackathon 101" },
-      applyUrl: "https://hackersatupc.typeform.com/hn-episode-2",
+      applyUrl: "https://hackersatupc.typeform.com/hn-2024-ep-3",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
