@@ -48,6 +48,7 @@ hackNights.nextEvent = hackNights.events.reduce((event, next) => {
   let date = new Date(event.date);
   let dateNext = new Date(next.date);
 
+  // if the event is in the future and the next event is in the future
   if(date > now && date < dateNext) return event;
   else return next;
 },  hackNights.events[0]);
