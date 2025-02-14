@@ -13,42 +13,14 @@ var hackNights = {
   }, 
   events: [
     {
-      date: "2024-09-27 21:00",
-      name: "Episodi III (2024)",
-      theme: { emoji: "💻", name: "Hackathon 101" },
-      applyUrl: "https://hackersatupc.typeform.com/hn-2024-ep-3",
+      date: "2025-02-21 21:00",
+      name: "Episodi I (2025)",
+      theme: { emoji: "🎨", name: "UX/UI 101" },
+      applyUrl: "https://hackersatupc.typeform.com/ht-2025-ep-1",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
-        { hour: "21:30", name: "Workshop: Què és una hackathon?" },
-        { hour: "00:00", name: "Midnight Snack" },
-        { hour: "05:00", name: "Cerimònia de clausura" },
-      ],
-      summary: ""
-    },
-    {
-      date: "2024-04-19 21:00",
-      name: "Episodi II (2024)",
-      theme: { emoji: "🚩", name: "CTFs" },
-      applyUrl: "https://hackersatupc.typeform.com/hn-episode-2",
-      schedule: [
-        { hour: "21:00", name: "Registre" },
-        { hour: "21:15", name: "Cerimònia d'obertura" },
-        { hour: "21:30", name: "Workshop: Iniciació als CTFs" },
-        { hour: "00:00", name: "Midnight Snack" },
-        { hour: "05:00", name: "Cerimònia de clausura" },
-      ],
-      summary: ""
-    },
-    {
-      date: "2024-02-23 21:00",
-      name: "Episodi I (2024)",
-      theme: { emoji: "🌐", name: "Web Development 101" },
-      applyUrl: "https://hackersatupc.typeform.com/ht-2024-ep-1",
-      schedule: [
-        { hour: "21:00", name: "Registre" },
-        { hour: "21:15", name: "Cerimònia d'obertura" },
-        { hour: "21:30", name: "Workshop: Crea la teva primera pàgina web." },
+        { hour: "21:30", name: "Workshop: UX/UI Introduction." },
         { hour: "00:00", name: "Midnight Snack" },
         { hour: "05:00", name: "Cerimònia de clausura" },
       ],
@@ -76,6 +48,7 @@ hackNights.nextEvent = hackNights.events.reduce((event, next) => {
   let date = new Date(event.date);
   let dateNext = new Date(next.date);
 
+  // if the event is in the future and the next event is in the future
   if(date > now && date < dateNext) return event;
   else return next;
 },  hackNights.events[0]);
