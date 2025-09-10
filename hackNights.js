@@ -10,17 +10,17 @@ var hackNights = {
     schedule: undefined,
     done: false,
     next: false,
-  }, 
+  },
   events: [
     {
-      date: "2025-02-21 21:00",
-      name: "Episodi I (2025)",
-      theme: { emoji: "🎨", name: "UX/UI 101" },
+      date: "2025-10-03 21:00",
+      name: "Episodi II (2025)",
+      theme: { emoji: "💻", name: "Back to school AI tools" },
       applyUrl: "https://hackersatupc.typeform.com/ht-2025-ep-1",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
-        { hour: "21:30", name: "Workshop: UX/UI Introduction." },
+        { hour: "21:30", name: "Workshop: AI tools for university and school." },
         { hour: "00:00", name: "Midnight Snack" },
         { hour: "05:00", name: "Cerimònia de clausura" },
       ],
@@ -43,7 +43,7 @@ hackNights.events.sort(compare);
 
 let now = new Date();
 
-// set the next event 
+// set the next event
 hackNights.nextEvent = hackNights.events.reduce((event, next) => {
   let date = new Date(event.date);
   let dateNext = new Date(next.date);
@@ -52,7 +52,7 @@ hackNights.nextEvent = hackNights.events.reduce((event, next) => {
   if(date > now && date < dateNext) return event;
   else return next;
 },  hackNights.events[0]);
-hackNights.nextEvent.next = true; 
+hackNights.nextEvent.next = true;
 
 // set done and next attribute
 for (const event of hackNights.events) {
