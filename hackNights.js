@@ -13,10 +13,10 @@ var hackNights = {
   },
   events: [
     {
-      date: "2025-10-03 21:00",
-      name: "Episodi II (2025)",
-      theme: { emoji: "💻", name: "Back to school AI tools" },
-      applyUrl: "https://hackersatupc.typeform.com/ht-2025-ep-1",
+      date: "2026-27-02 21:00",
+      name: "Episodi I (2026)",
+      theme: { emoji: "🤖", name: "Estudiar en temps de IA" },
+      applyUrl: "https://hackersatupc.typeform.com/hacknights2026",
       schedule: [
         { hour: "21:00", name: "Registre" },
         { hour: "21:15", name: "Cerimònia d'obertura" },
