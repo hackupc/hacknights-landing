@@ -29,7 +29,7 @@ var hackNights = {
     {
       date: "2026-10-02 21:00",
       name: "Episodi II (2026)",
-      theme: { emoji: "🤖", name: "Estudiar en temps de IA" },
+      theme: { emoji: "🤖", name: "Hackers@UPC X JetBrains" },
       applyUrl: "https://hackersatupc.typeform.com/to/ToRHdqnJ?fbclid=PAcGRvZgRleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAadpMiAXVP7pX698P0PzNfSnIQnHWwGsvOQRVrnjgSaIht2kIxr1uQ7rXcMtfA_aem_Rc10ouaN2I76CBRud8aI6g&typeform-source=l.instagram.com",
       schedule: [
         { hour: "21:00", name: "Registre" },
