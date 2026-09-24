@@ -35,7 +35,8 @@ var hackNights = {
         { hour: "21:00", name: "Registre" },
         { hour: "21:50", name: "Cerimònia d'obertura" },
         { hour: "22:00", name: "Workshop: Tap In: Building Real-World Android Apps with NFC" },
-        { hour: "00:00", name: "Midnight Snack" },
+        { hour: "23:00", name: "Sopar: pizzes" },
+        { hour: "01:00", name: "Midnight Snack" },
         { hour: "05:00", name: "Cerimònia de clausura" },
       ],
       summary: ""
